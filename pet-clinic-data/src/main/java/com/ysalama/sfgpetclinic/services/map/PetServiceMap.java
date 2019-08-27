@@ -2,10 +2,12 @@ package com.ysalama.sfgpetclinic.services.map;
 
 import com.ysalama.sfgpetclinic.model.Pet;
 import com.ysalama.sfgpetclinic.services.CrudService;
+import com.ysalama.sfgpetclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+@Service
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
